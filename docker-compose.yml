@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  hft_monitor:
+    build: .
+    container_name: citadel_raw_socket
+    # Toujours nécessaire pour accéder à la carte réseau réelle
+    privileged: true
+    network_mode: "host"
